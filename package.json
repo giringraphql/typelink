@@ -1,0 +1,68 @@
+{
+  "name": "@girin/typelink",
+  "version": "0.5.2",
+  "description": "Define GraphQL types linked to classes",
+  "author": "Max Choi <hanpama@gmail.com>",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublish": "npm run build",
+    "test": "jest --verbose",
+    "test:ci": "npm run coverage -- --ci",
+    "testonly": "npm test",
+    "coverage": "npm test -- --coverage",
+    "coverage:upload": "codecov",
+    "lint": "tslint --project tslint.json src/**/*.ts"
+  },
+  "tags": [
+    "graphql",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanpama/girin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanpama/girin/issues"
+  },
+  "homepage": "https://github.com/hanpama/girin",
+  "license": "MIT",
+  "peerDependencies": {
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+  },
+  "devDependencies": {
+    "@types/graphql-relay": "^0.4.8",
+    "@types/graphql": "^14.0.3",
+    "@types/jest": "^23.3.9",
+    "codecov": "^3.1.0",
+    "cursor-connection": "^0.5.2",
+    "graphql-relay": "^0.5.5",
+    "graphql": "^14.0.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "typedoc": "^0.13.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "tests/.*\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
