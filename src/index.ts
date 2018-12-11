@@ -19,6 +19,7 @@ export * from './type-expression/GraphQLTypeExpression';
 export * from './type-expression/TypeExpression';
 export * from './type-expression/structure';
 export * from './type-expression/coerceType';
+export * from './type-expression/types';
 
 export * from './metadata/Definition';
 export * from './metadata/MetadataStorage';
